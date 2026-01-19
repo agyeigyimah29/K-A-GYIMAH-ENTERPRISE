@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | K.A GYIMAH ENTERPRISE</title>
+    <!-- Adding FontAwesome for Icons -->
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <style>
+        :root { 
+            --primary: #0a0a0a; 
+            --accent: #e74c3c; 
+            --light-bg: #f4f4f4;
+            --text: #333;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: var(--text); }
+        
+        /* Navigation */
+        nav { 
+            background: var(--primary); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1.2rem 6%; 
+            border-bottom: 3px solid var(--accent); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo a { 
+            font-size: 1.3rem; 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+        .logo img {
+            height: 40px;
+        }
+        .logo span { 
+            color: var(--accent); 
+        }
+        .nav-links a { 
+            color: #fff; 
+            margin-left: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.8rem; 
+            padding-bottom: 5px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        .nav-links a:hover, .nav-links a.active { 
+            color: var(--accent); 
+            border-bottom: 3px solid var(--accent); 
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images.unsplash.com');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 { 
+            font-size: 3rem; 
+            margin-bottom: 10px; 
+            text-transform: uppercase; 
+        }
+        .hero p { 
+            font-size: 1.1rem; 
+            color: #ddd; 
+            max-width: 600px; 
+        }
+
+        /* Services Grid */
+        .services-box { 
+            padding: 80px 6%; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+            background: #fff;
+        }
+
+        .service { 
+            padding: 50px 30px; 
+            background: var(--light-bg); 
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service h3 { 
+            font-size: 1.5rem; 
+            margin-bottom: 15px; 
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .service p { color: #666; 
+            font-size: 0.95rem; 
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 60px 6%;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .cta-btn:hover { background: #c0392b; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html"><img src="/img/mr. Gyimah logo.png" alt="">K.A GYIMAH<span> ENT</span></a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="trucks.html">Trucks</a>
+            <a href="cars.html">Cars</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Our Services</h1>
+        <p>Reliable automotive and logistics solutions tailored to your business and personal needs.</p>
+    </header>
+
+    <div class="services-box">
+        <div class="service">
+            <i class="fas fa-ship"></i>
+            <h3>Vehicle Importation</h3>
+            <p>We handle the end-to-end process of sourcing and importing high-quality, "home-used" vehicles from Europe and North America directly to your doorstep.</p>
+        </div>
+
+        <div class="service">
+            <i class="fas fa-truck-moving"></i>
+            <h3>Truck Sales & Supply</h3>
+            <p>Specializing in heavy-duty machinery and transport trucks. Whether for construction or haulage, we provide vehicles that power your business.</p>
+        </div>
+
+        <div class="service">
+            <i class="fas fa-route"></i>
+            <h3>Logistics Consultation</h3>
+            <p>Not sure which fleet suits your budget? Our experts provide technical advice on vehicle durability, maintenance costs, and fuel efficiency.</p>
+        </div>
+
+        <div class="service">
+            <i class="fas fa-tools"></i>
+            <h3>Pre-Purchase Inspection</h3>
+            <p>Every vehicle in our inventory undergoes a rigorous multi-point inspection to ensure mechanical integrity before it reaches our showroom.</p>
+        </div>
+
+        <div class="service">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <h3>Customs Clearing</h3>
+            <p>We simplify the paperwork. Our team assists with the legalities and customs clearance to ensure a smooth transition for imported units.</p>
+        </div>
+
+        <div class="service">
+            <i class="fas fa-handshake"></i>
+            <h3>After-Sales Support</h3>
+            <p>Our relationship doesn't end at the sale. We offer guidance on parts sourcing and trusted mechanical workshops to keep you on the road.</p>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Ready to find your next vehicle?</h2>
+        <p>Contact K.A Gyimah Enterprise today for a quote or consultation.</p>
+        <a href="contact.html" class="cta-btn">Get In Touch Now</a>
+    </section>
+
+</body>
+</html>

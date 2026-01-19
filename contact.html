@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | K.A GYIMAH ENTERPRISE</title>
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <style>
+        :root { 
+            --primary: #0a0a0a; 
+            --accent: #e74c3c; 
+            --grey: #f4f4f4; 
+        }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            background: var(--grey); 
+            line-height: 1.6; 
+        }
+        
+        /* Navigation */
+        nav { 
+            background: var(--primary); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1.2rem 6%; 
+            border-bottom: 3px solid var(--accent); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo a { 
+            font-size: 1.3rem; 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+        }
+        .logo img {
+            height: 40px;
+        }
+        .logo span { 
+            color: var(--accent); 
+        }
+        .nav-links a { 
+            color: #fff; 
+            margin-left: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+        }
+        .nav-links a.active { 
+            border-bottom: 3px solid var(--accent); 
+            color: var(--accent); 
+            padding-bottom: 5px; 
+        }
+
+        /* Contact Section */
+        .contact-container { 
+            max-width: 1100px; 
+            margin: 60px auto; 
+            padding: 0 6%; 
+            display: grid; 
+            grid-template-columns: 1fr 1.5fr; 
+            gap: 40px; 
+        }
+
+        /* Left Side: Info */
+        .info-panel { 
+            background: var(--primary); 
+            color: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+        }
+        .info-panel h2 { 
+            color: var(--accent); 
+            text-transform: uppercase; 
+            margin-top: 0; 
+        }
+        .info-item { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 25px; 
+        }
+        .info-item i { 
+            background: var(--accent); 
+            width: 45px; 
+            height: 45px; 
+            line-height: 45px; 
+            text-align: center; 
+            border-radius: 50%; 
+            margin-right: 15px; 
+            font-size: 1.2rem; 
+        }
+        .info-item div p { 
+            margin: 0; 
+            font-size: 0.95rem; 
+        }
+        .info-item div strong { 
+            display: block; 
+            font-size: 1.1rem; 
+        }
+
+        /* Right Side: Form */
+        .form-panel { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        }
+        .form-panel h3 { 
+            margin-top: 0; 
+            margin-bottom: 20px; 
+            font-size: 1.8rem; 
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        .form-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            font-size: 0.9rem; 
+        }
+        .form-group input, .form-group textarea, .form-group select { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-family: inherit; 
+        }
+        .form-group textarea { 
+            height: 120px; 
+        }
+        
+        .submit-btn { 
+            background: var(--accent); 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: 0.3s; 
+        }
+        .submit-btn:hover { 
+            background: #c0392b; 
+            transform: translateY(-2px); 
+        }
+
+        @media (max-width: 900px) {
+            .contact-container { 
+                grid-template-columns: 1fr; 
+            }
+            .nav-links { 
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html"><img src="/img/mr. Gyimah logo.png" alt="">K.A GYIMAH<span> ENT</span></a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="trucks.html">Trucks</a>
+            <a href="cars.html">Cars</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="info-panel">
+            <h2>Get In Touch</h2>
+            <p>Connect with us for vehicle inspections, price inquiries, or logistics consultation.</p>
+            
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <strong>Phone</strong>
+                    <p>0547830047</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong>Email</strong>
+                    <p>agyeigyimah29@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <strong>Location</strong>
+                    <p>Kumasi / Accra, Ghana</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <strong>Hours</strong>
+                    <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <div class="form-panel">
+            <h3>Send a Message</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Interest</label>
+                    <select>
+                        <option>Truck Inquiry</option>
+                        <option>Passenger Car Inquiry</option>
+                        <option>Vehicle Importation</option>
+                        <option>General Support</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Describe the vehicle or service you are interested in..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

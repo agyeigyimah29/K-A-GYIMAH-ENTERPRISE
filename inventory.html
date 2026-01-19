@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory | K.A GYIMAH ENTERPRISE - Quality Trucks & Cars</title>
+    <style>
+        :root {
+            --primary: #0a0a0a;
+            --accent: #e74c3c;
+            --secondary: #34495e;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; margin: 0; color: #333; line-height: 1.6; background: var(--light); }
+
+        /* Navigation */
+        nav { 
+            background: var(--primary); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1.2rem 6%; 
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--accent);
+        }
+        .logo a { 
+            font-size: 1.3rem; 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+        }
+        .logo img {
+            height: 40px;
+        }
+        .logo span { 
+            color: var(--accent); 
+        }
+        .nav-links { 
+            display: flex; 
+            flex-wrap: wrap; 
+        }
+        .nav-links a { 
+            color: #fff; 
+            margin-left: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.8rem; 
+            padding-bottom: 5px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        
+        /* ACTIVE STATE */
+        .nav-links a.active { 
+            border-bottom: 3px solid var(--accent); 
+            color: var(--accent); }
+        .nav-links a:hover { 
+            color: var(--accent); 
+        }
+
+        /* Header Section */
+        .inventory-header {
+            background: var(--primary);
+            color: white;
+            padding: 60px 6%;
+            text-align: center;
+        }
+        .inventory-header h1 { 
+            font-size: 2.5rem; 
+            margin: 0; 
+            text-transform: uppercase; 
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--white);
+            padding: 20px 6%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 75px;
+            z-index: 900;
+        }
+        .filter-bar select {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Inventory Grid */
+        .inventory-section { 
+            padding: 40px 6%; 
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .vehicle-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+        .vehicle-card:hover { 
+            transform: translateY(-10px); 
+        }
+        
+        .badge {
+            position: absolute; 
+            top: 15px; 
+            left: 15px;
+            background: var(--accent); 
+            color: white;
+            padding: 5px 12px; 
+            border-radius: 4px; 
+            font-size: 0.75rem; 
+            font-weight: bold;
+        }
+        .img-container { 
+            position: relative; 
+            height: 220px; 
+            background: #222; 
+        }
+        .img-container img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        
+        .details { 
+            padding: 20px; 
+        }
+        .details h3 { 
+            margin: 0 0 10px 0; 
+            font-size: 1.3rem; 
+            color: var(--primary); 
+        }
+        .specs { 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 0.85rem; 
+            color: #666; 
+            margin-bottom: 20px; 
+        }
+        .specs span { 
+            background: #eee; 
+            padding: 3px 8px; 
+            border-radius: 4px; 
+        }
+        
+        .price-box { 
+            border-top: 1px solid #eee; 
+            padding-top: 15px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .price { 
+            font-weight: 900; 
+            color: var(--accent); 
+            font-size: 1.1rem; 
+        }
+        .view-btn { 
+            text-decoration: none; 
+            color: var(--primary); 
+            font-weight: bold; 
+            font-size: 0.8rem; 
+            border: 1px solid var(--primary); 
+            padding: 5px 10px; 
+            border-radius: 4px; 
+            transition: 0.3s; 
+        }
+        .view-btn:hover { 
+            background: var(--primary); 
+            color: white; 
+        }
+
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 40px 6%; 
+            text-align: center; 
+            margin-top: 60px; 
+        }
+
+        @media (max-width: 768px) {
+            .filter-bar { 
+                flex-direction: column; 
+                top: 0; 
+            }
+            nav { 
+                flex-direction: column; 
+            }
+            .nav-links { 
+                margin-top: 15px; 
+                justify-content: center; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html"><img src="/img/mr. Gyimah logo.png" alt="">K.A GYIMAH<span> ENTERPRISE</span></a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html" class="active">Inventory</a>
+            <a href="trucks.html">Trucks</a>
+            <a href="cars.html">Cars</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="inventory-header">
+        <h1>Current Stock</h1>
+        <p>Quality Home Used Trucks and Cars</p>
+    </header>
+
+    <div class="filter-bar">
+        <select><option>Vehicle Type</option><option>Trucks</option><option>Cars/SUVs</option></select>
+        <select><option>Price Range</option><option>Under GHS 100k</option><option>GHS 100k - 200k</option></select>
+        <select><option>Make</option><option>Toyota</option><option>Mercedes</option><option>MAN</option></select>
+    </div>
+
+    <section class="inventory-section">
+        <div class="grid">
+            <!-- Vehicle 1 -->
+            <div class="vehicle-card">
+                <div class="img-container">
+                    <span class="badge">TRUCK</span>
+                    <img src="/img/Mercedes-Benz Actros.jpg" alt="Truck">
+                </div>
+                <div class="details">
+                    <h3>Mercedes-Benz Actros</h3>
+                    <div class="specs"><span>2018</span> <span>Diesel</span> <span>Home Used</span></div>
+                    <div class="price-box">
+                        <span class="price">GHS Call Now</span>
+                        <a href="contact.html" class="view-btn">Inspect</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 2 -->
+            <div class="vehicle-card">
+                <div class="img-container">
+                    <span class="badge">CAR</span>
+                    <img src="img/Lexus RX 350.jpg" alt="Car">
+                </div>
+                <div class="details">
+                    <h3>Lexus RX 350</h3>
+                    <div class="specs"><span>2019</span> <span>Petrol</span> <span>Foreign Used</span></div>
+                    <div class="price-box">
+                        <span class="price">GHS Call Now</span>
+                        <a href="contact.html" class="view-btn">Inspect</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 3 -->
+            <div class="vehicle-card">
+                <div class="img-container">
+                    <span class="badge">TRUCK</span>
+                    <img src="img/MAN Diesel TGS.jpg" alt="Truck">
+                </div>
+                <div class="details">
+                    <h3>MAN Diesel TGS</h3>
+                    <div class="specs"><span>2017</span> <span>Diesel</span> <span>Clean Chassis</span></div>
+                    <div class="price-box">
+                        <span class="price">GHS Call Now</span>
+                        <a href="contact.html" class="view-btn">Inspect</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 4 -->
+            <div class="vehicle-card">
+                <div class="img-container">
+                    <span class="badge">CAR</span>
+                    <img src="/img/Toyota Highlander.jpg" alt="Car">
+                </div>
+                <div class="details">
+                    <h3>Toyota Highlander</h3>
+                    <div class="specs"><span>2020</span> <span>Petrol</span> <span>Low Mileage</span></div>
+                    <div class="price-box">
+                        <span class="price">GHS Call Now</span>
+                        <a href="contact.html" class="view-btn">Inspect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 K.A GYIMAH ENTERPRISE | Phone: 0547830047 | Accra-Kumasi, Ghana</p>
+    </footer>
+
+</body>
+</html>
