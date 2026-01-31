@@ -4,184 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | K.A GYIMAH ENTERPRISE</title>
+
     <link rel="stylesheet" href="cdnjs.cloudflare.com">
+
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root { 
-            --primary: #0a0a0a; 
-            --accent: #e74c3c; 
-            --bg-light: #f9f9f9; 
-        }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-            line-height: 1.6; 
-            color: #333; 
-        }
         
-        /* Navigation */
-        nav { 
-            background: var(--primary); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 1.2rem 6%; 
-            border-bottom: 3px solid var(--accent); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
-        .logo a { 
-            font-size: 1.3rem; 
-            color: #fff; 
-            text-decoration: none; 
-            font-weight: 900; 
-            text-transform: uppercase; 
-        }
-        .logo img {
-            height: 40px;
-        }
-        .logo span { 
-            color: var(--accent); 
-        }
-        .nav-links a { 
-            color: #fff; 
-            margin-left: 15px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 0.8rem; 
-            padding-bottom: 5px; 
-            text-transform: uppercase; 
-            transition: 0.3s; 
-        }
-        .nav-links a.active, .nav-links a:hover { 
-            color: var(--accent); 
-            border-bottom: 3px solid var(--accent); 
-        }
-
-        /* Hero Section */
-        .about-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images.unsplash.com');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-        .about-hero h1 { 
-            font-size: 3.5rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-        }
-
-        /* Main Content */
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 80px 20px; 
-        }
-        
-        .story-section { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 50px; 
-            align-items: center; 
-            margin-bottom: 80px; 
-        }
-        .story-text h2 { 
-            font-size: 2rem; 
-            color: var(--primary); 
-            margin-bottom: 20px; 
-            position: relative; 
-        }
-        .story-text h2::after { 
-            content: ''; 
-            display: block; 
-            width: 60px; 
-            height: 4px; 
-            background: var(--accent); 
-            margin-top: 10px; 
-        }
-        .story-text p { 
-            font-size: 1.1rem; 
-            color: #555; 
-            margin-bottom: 20px; 
-        }
-
-        /* Core Values */
-        .values-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 30px; 
-            margin-top: 50px; 
-        }
-        .value-card { 
-            background: var(--bg-light); 
-            padding: 40px 30px; 
-            text-align: center; 
-            border-radius: 8px; 
-            transition: 0.3s; 
-            border-bottom: 3px solid #ddd; 
-        }
-        .value-card:hover { 
-            transform: translateY(-10px); 
-            border-color: var(--accent); 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-        }
-        .value-card i { 
-            font-size: 2.5rem; 
-            color: var(--accent); 
-            margin-bottom: 20px; 
-        }
-        .value-card h3 { 
-            text-transform: uppercase; 
-            margin-bottom: 15px; 
-            font-size: 1.2rem; 
-        }
-
-        /* Stats Bar */
-        .stats { 
-            background: var(--primary); 
-            color: #fff; 
-            padding: 60px 6%; 
-            display: flex; 
-            justify-content: space-around; 
-            text-align: center; 
-            flex-wrap: wrap; 
-        }
-        .stat-item h2 { 
-            font-size: 2.5rem; 
-            color: var(--accent); 
-            margin: 0; 
-        }
-        .stat-item p { 
-            text-transform: uppercase; 
-            font-size: 0.9rem; 
-            letter-spacing: 1px; 
-        }
-
-        @media (max-width: 768px) {
-            .story-section { grid-template-columns: 1fr; }
-            .about-hero h1 { font-size: 2.5rem; }
-            .stats { gap: 30px; }
-        }
+       
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo"><a href="index.html"><img src="/img/mr. Gyimah logo.png" alt="">K.A GYIMAH<span> ENT</span></a></div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="trucks.html">Trucks</a>
-            <a href="cars.html">Cars</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="services.html">Services</a>
-            <a href="about.html" class="active">About Us</a>
-            <a href="contact.html">Contact</a>
+            <a class="logo" href="index.html"><img src="img/mr. Gyimah logo.png" alt="">K.A GYIMAH<span> ENT</span></a>
+        <ul>
+            <a class="nav-links" href="index.html">Home</a>
+            <a class="nav-links" href="inventory.html">Inventory</a>
+            <a class="nav-links" href="trucks.html">Trucks</a>
+            <a class="nav-links" href="cars.html">Cars</a>
+            <a class="nav-links" href="gallery.html">Gallery</a>
+            <a class="nav-links" href="services.html">Services</a>
+            <a class="nav-links active" href="about.html">About Us</a>
+            <a class="nav-links" href="contact.html">Contact</a>
+        </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
@@ -197,7 +47,7 @@
                 <p>We don't just sell vehicles; we provide the backbone for your business logistics and the safety for your family's travels. Every unit in our showroom is hand-selected from trusted global sources, ensuring "home-used" quality that rivals brand-new standards.</p>
             </div>
             <div class="story-image">
-                <img src="/img/Showroom.jpg" alt="Showroom" style="width:100%; border-radius:10px; box-shadow: 20px 20px 0 var(--accent);">
+                <img src="img/Showroom.jpg" alt="Showroom" style="width:100%; border-radius:10px; box-shadow: 20px 20px 0 var(--accent);">
             </div>
         </div>
 
